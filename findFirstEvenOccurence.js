@@ -1,4 +1,4 @@
-/* Given an array, find the first item that occurs
+/* Given an array, find the first-appearing item that occurs
    an even number of times in the array. 
    Handle multiple even-occurence items and return the first one.
    Return null if there are no even-occurence items. */
