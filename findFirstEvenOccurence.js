@@ -4,9 +4,6 @@
    Return null if there are no even-occurence items. */
 
 
-// The below is my first draft from 4 months ago
-
-
 function findFirstEvenOccurence (arr) {
 	var occurenceStore = {};
 
@@ -19,18 +16,11 @@ function findFirstEvenOccurence (arr) {
 		}
 	}
 
-	for (var key in occurenceStore) {
-		if (occurenceStore[key] % 2 !== 0) {
-			delete occurenceStore[key];
-		}
-	}
 
 	for (var j = 0; j < arr.length; j++) {
-		if (occurenceStore.hasOwnProperty(arr[j])) {
+		if (arr[j] in occurenceStore && occurenceStore[arr[j]] % 2 === 0) {
 			return arr[j];
 		}
-		if (arr[j+1] === undefined) {
-			return null;
-		}
 	}
+	return null;
 }
